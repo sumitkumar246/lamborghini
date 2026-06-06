@@ -1,0 +1,142 @@
+.footer {
+  background: #4439395e;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(201, 164, 92, 0.08);
+  border-radius: 50%;
+  top: -250px;
+  right: -150px;
+}
+
+.footer-overlay {
+  max-width: 1300px;
+  margin: auto;
+  padding: 90px 30px 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-logo {
+  font-size: 42px;
+  font-family: var(--heading-font);
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.footer-logo span {
+  color: white;
+}
+
+.footer-col p {
+  color: #bdbdbd;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.footer-col h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+.footer-col ul {
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 14px;
+}
+
+.footer-col ul li a {
+  color: #d8d8d8;
+  transition: .3s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--primary);
+  padding-left: 6px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.footer-social a {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(201,164,92,.4);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+  transition: .4s;
+}
+
+.footer-social a:hover {
+  background: var(--primary);
+  color: black;
+  transform: translateY(-5px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 50px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #999;
+  font-size: 14px;
+}
+
+@media(max-width:992px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    font-size: 34px;
+  }
+}
+
+@media(max-width:768px) {
+  .footer-overlay {
+    padding: 70px 20px 20px;
+  }
+
+  .footer-logo {
+    font-size: 28px;
+  }
+
+  .footer-col h3 {
+    font-size: 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-col,
+  .footer-bottom {
+    text-align: center;
+  }
+}

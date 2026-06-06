@@ -1,0 +1,152 @@
+.projects-section {
+  padding: 120px 0;
+  background: #68655d;
+}
+
+.projects-header {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.projects-header span {
+  color: #c9a45c;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.projects-header p {
+  color: #f8f4f4;
+  line-height: 1.8;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.project-card {
+  background: rgb(228, 218, 218);
+  border-radius: 30px;
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+  transition: .5s;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+
+  transition: .7s;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #c9a45c,
+    #f0d28d
+  );
+
+  color: #111;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.project-content {
+  padding: 30px;
+}
+
+.project-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.location svg {
+  color: #c9a45c;
+}
+
+.project-content h4 {
+  color: #c9a45c;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.project-content button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #111;
+  color: white;
+
+  padding: 14px 26px;
+
+  border-radius: 50px;
+
+  border: none;
+  cursor: pointer;
+
+  transition: .4s;
+}
+
+.project-content button:hover {
+  background: #c9a45c;
+  color: #111;
+}
+
+@media(max-width:992px){
+
+  .projects-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+
+  .projects-section{
+    padding:80px 20px;
+  }
+
+}

@@ -1,0 +1,98 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+.popup-box {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 42px;
+  border-radius: 30px;
+  position: relative;
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.35);
+  animation: popupShow 0.35s ease;
+}
+
+@keyframes popupShow {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #111;
+}
+
+.popup-box h2 {
+  color: #111;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.popup-box p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  outline: none;
+  font-size: 15px;
+}
+
+.popup-box input:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 15px rgba(201, 164, 92, 0.18);
+}
+
+.popup-box button[type="submit"] {
+  width: 100%;
+  padding: 16px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #c9a45c, #e8cc88);
+  color: #111;
+  font-weight: 800;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.popup-box button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(201, 164, 92, 0.35);
+}
+
+@media (max-width: 480px) {
+  .popup-box {
+    padding: 32px 22px;
+  }
+
+  .popup-box h2 {
+    font-size: 28px;
+  }
+}

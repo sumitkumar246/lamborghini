@@ -1,0 +1,46 @@
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+}.gallery-overlay {
+  background: transparent !important;
+}
+
+.gallery-card img {
+  filter: brightness(1) !important;
+}
+.gallery-header p{
+  color: azure;
+}
+
+.gallery-card::before,
+.gallery-card::after {
+  display: none !important;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  opacity: 1;
+}
+
+.gallery-overlay h3,
+.gallery-overlay span {
+  color: white;
+}
+
+.gallery-btn {
+  width: fit-content;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: 50px;
+  color: #111;
+  font-weight: 700;
+}
