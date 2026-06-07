@@ -51,3 +51,27 @@ export const getEnquiries = async (req, res) => {
     });
   }
 };
+
+export const deleteEnquiry = async (req, res) => {
+  try {
+    const enquiry = await Enquiry.findByIdAndDelete(req.params.id);
+
+    if (!enquiry) {
+      return res.status(404).json({
+        success: false,
+        message: "Enquiry not found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Enquiry deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Server error",
+      error: error.message,
+    });
+  }
+};
